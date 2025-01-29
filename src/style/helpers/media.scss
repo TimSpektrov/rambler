@@ -1,6 +1,7 @@
 @use 'mixins';
 
 $widthMobile: mixins.rem(550);
+$widthMiniTablet: mixins.rem(768);
 $widthTablet: mixins.rem(900);
 $widthLaptop: mixins.rem(1200);
 $widthDesktop: mixins.rem(1600);
@@ -17,6 +18,11 @@ $widthDesktop: mixins.rem(1600);
 }
 @mixin tablet {
   @media screen and ($widthMobile <= width < $widthLaptop) {
+    @content
+  }
+}
+@mixin tablet-up {
+  @media screen and ($widthMiniTablet <= width) {
     @content
   }
 }

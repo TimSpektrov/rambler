@@ -19,15 +19,12 @@
       align-items: start;
       margin-bottom: mixins.rem(60);
       z-index: 1;
-    }
 
-    @include media.desktop-down {
-
-    }
-
-    @include media.desktop {
+      @include media.tablet-up{
       gap: mixins.rem(90);
       grid-template-columns: 1fr mixins.rem(320);
+
+      }
     }
   }
 
