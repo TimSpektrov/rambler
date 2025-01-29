@@ -59,9 +59,6 @@ body {
   width: 100%;
   padding: mixins.rem(48) mixins.rem(20);
 
-  @include media.tablet {
-    padding: mixins.rem(60) mixins.rem(40) mixins.rem(60)
-  }
   @include media.desktop {
     max-width: mixins.rem(1440);
     margin-inline: auto;

@@ -4,6 +4,25 @@
 .hero {
   .container {
     position: relative;
+    padding-block: 8% 105%;
+    background: center 112% / contain url(./images/svg/Portrait/Illustration-Head-Portrait.svg) no-repeat;
+
+    @include media.landscape{
+      aspect-ratio: 1.87;
+      padding-top: min(mixins.rem(128), ((100vw - 450px) / 7));
+      padding-bottom: 0;
+      background: none;
+
+      @include media.desktop {
+        padding: mixins.rem(128) mixins.rem(80);
+      }
+    }
+
+    @include media.portrait {
+
+
+    }
+
     &:before,
     &:after {
       content: '';
@@ -28,19 +47,7 @@
       background: 0 100% / contain url(./images/svg/Desktop/lines-white.svg) no-repeat;
     }
 
-    @include media.landscape{
-      aspect-ratio: 1.87;
-      padding-top: 8%;
 
-      @include media.desktop {
-        padding: mixins.rem(128) mixins.rem(80);
-      }
-    }
-
-    @include media.portrait {
-      padding-block: 8% 105%;
-      background: center 112% / contain url(./images/svg/Portrait/Illustration-Head-Portrait.svg) no-repeat;
-    }
   }
 }
 
