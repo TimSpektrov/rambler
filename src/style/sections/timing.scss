@@ -1,0 +1,71 @@
+@use 'src/style/helpers/media';
+@use 'src/style/helpers/mixins';
+
+.timing {
+  .container {
+    background: 40% 94% url(./images/svg/Desktop/lines-blue.svg) no-repeat;
+    background-size: mixins.rem(512);
+    padding-bottom: mixins.rem(104);
+
+    @include media.mobile-up {
+      background-position: 94.4% 82%;
+    }
+  }
+
+  &__grid-container {
+    display: grid;
+    gap: mixins.rem(42);
+    @include media.landscape {
+      align-items: start;
+      margin-bottom: mixins.rem(60);
+      z-index: 1;
+    }
+
+    @include media.desktop-down {
+
+    }
+
+    @include media.desktop {
+      gap: mixins.rem(90);
+      grid-template-columns: 1fr mixins.rem(320);
+    }
+  }
+
+  &__description {
+    line-height: 1.54;
+    @include mixins.fluid-text(26, 17);
+
+    &:not(:last-child) {
+      margin-bottom: 0.6em;
+    }
+  }
+
+  &__safety {
+    position: relative;
+    border: 2px solid var(--color-blue);
+    border-radius: mixins.rem(40);
+    font-weight: 600;
+    line-height: 153.4%;
+    color: var(--color-blue);
+    background-color: var(--color-white);
+
+    @include media.desktop-down {
+      margin-right: mixins.rem(16);
+      padding: mixins.rem(32) mixins.rem(20) mixins.rem(40) mixins.rem(24);
+      margin-bottom: mixins.rem(70);
+      box-shadow: mixins.rem(16) mixins.rem(16) var(--color-blue);
+      font-size: mixins.rem(21);
+    }
+
+    @include media.desktop {
+      margin-top: 10px;
+      padding: mixins.rem(47) mixins.rem(24);
+      box-shadow: mixins.rem(36) mixins.rem(36) var(--color-blue);
+      font-size: mixins.rem(18);
+    }
+  }
+
+  &__button {
+    margin-right: mixins.rem(10);
+  }
+}

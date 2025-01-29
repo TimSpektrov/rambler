@@ -1,0 +1,57 @@
+@use 'src/style/helpers/media';
+@use 'src/style/helpers/mixins';
+
+.hero {
+  .container {
+    position: relative;
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      opacity: 0;
+      transform: translateY(mixins.rem(-16));
+      animation: fadeIn 0.5s forwards;
+    }
+
+    &:before {
+      bottom: 0.7%;
+      right: 0;
+      width: 67.3%;
+      aspect-ratio: 1.13;
+      background: 100% 100% / contain  url(./images/svg/Desktop/Illustration-Head.svg) no-repeat;
+    }
+    &:after {
+      bottom: 7.8%;
+      left: 1.4%;
+      width: 30.8%;
+      aspect-ratio: 1.62;
+      background: 0 100% / contain url(./images/svg/Desktop/lines-white.svg) no-repeat;
+    }
+
+    @include media.landscape{
+      aspect-ratio: 1.87;
+      padding-top: 8%;
+
+
+      @include media.desktop {
+        padding: mixins.rem(128) mixins.rem(80);
+      }
+    }
+
+    @include media.portrait {
+      padding-block: 8% 105%;
+      background: center 112% / contain url(./images/svg/Portrait/Illustration-Head-Portrait.svg) no-repeat;
+    }
+  }
+}
+
+.title {
+  max-width: 9em;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

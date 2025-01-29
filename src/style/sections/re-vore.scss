@@ -1,0 +1,25 @@
+@use 'src/style/helpers/media';
+@use 'src/style/helpers/mixins';
+
+.re-vote {
+  &.negative {
+    background-color: var(--color-orange);
+  }
+  .container {
+    background: 27% 7%/ 95% url(./images/svg/Desktop/ILLUSTRATION-3.svg) no-repeat;
+    padding-bottom: mixins.rem(32);
+    @include media.desktop-down {
+      padding-top: 105%;
+    }
+    @include media.desktop {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: mixins.rem(32);
+      padding-block: mixins.rem(160) mixins.rem(200);
+      background: 11% 47%/49.3% url(./images/svg/Desktop/ILLUSTRATION-3.svg) no-repeat, 93% 96%/22% url(./images/svg/Desktop/lines-white.svg) no-repeat;
+    }
+  }
+  &__content {
+    grid-column: 2;
+  }
+}

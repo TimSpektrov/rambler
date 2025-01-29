@@ -1,0 +1,22 @@
+@use 'src/style/helpers/media';
+@use 'src/style/helpers/mixins';
+
+.how {
+  .container {
+    background: 24% -10%/ 91% url(./images/svg/Desktop/ILLUSTRATION-2.svg) no-repeat;
+    padding-bottom: mixins.rem(32);
+    @include media.desktop-down {
+      padding-top: 105%;
+    }
+    @include media.desktop {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: mixins.rem(32);
+      padding-block: mixins.rem(160) mixins.rem(252);
+      background: 5% 16%/46% url(./images/svg/Desktop/ILLUSTRATION-2.svg) no-repeat, 94% 98% / 28% url(./images/svg/Desktop/lines-white-2.svg) no-repeat;
+    }
+  }
+  &__content {
+    grid-column: 2;
+  }
+}
