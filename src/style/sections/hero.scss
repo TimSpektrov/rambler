@@ -32,7 +32,6 @@
       aspect-ratio: 1.87;
       padding-top: 8%;
 
-
       @include media.desktop {
         padding: mixins.rem(128) mixins.rem(80);
       }
