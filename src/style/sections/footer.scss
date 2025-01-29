@@ -26,29 +26,22 @@
   &__link {
     position: relative;
     z-index: 1;
-    &:before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: mixins.rem(50);
-      height: mixins.rem(50);
-      background: radial-gradient(closest-side, var(--color-black) 60%, var(--color-white) 100%);
-      z-index: -1;
-      border-radius: 50%;
-      translate: -50% -50%;
-      scale: 0;
-      transition: scale 0.2s ease-in;
-      border: 1px solid var(--color-white);
 
-    }
-
-    &:hover {
-      &:before {
-        scale: 1;
+    @media (hover: hover) {
+      &:hover {
+        filter: drop-shadow(2px 4px 6px black);
       }
-      .social__img {
+      &:focus {
+        filter: invert(20%);
       }
     }
+
+    @media (hover: none) {
+      &:active {
+        filter: invert(50%);
+      }
+    }
+
+
   }
 }

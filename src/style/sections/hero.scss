@@ -2,12 +2,14 @@
 @use 'src/style/helpers/mixins';
 
 .hero {
+  box-shadow: 0 -100px var(--color-blue);
+  overflow: hidden;
+
   .container {
     position: relative;
-    padding-block: 8% 105%;
-    background: center 112% / contain url(./images/svg/Portrait/Illustration-Head-Portrait.svg) no-repeat;
+    padding-block: 10% 105%;
 
-    @include media.landscape{
+    @include media.landscape {
       aspect-ratio: 1.87;
       padding-top: min(mixins.rem(128), ((100vw - 450px) / 7));
       padding-bottom: 0;
@@ -18,46 +20,55 @@
       }
     }
 
-    @include media.portrait {
-
-
-    }
-
     &:before,
     &:after {
-      content: '';
-      position: absolute;
       opacity: 0;
-      transform: translateY(mixins.rem(-16));
-      animation: fadeIn 0.5s forwards;
+      animation: fadeInNegative 0.8s 0.7s forwards ease-in;
     }
 
     &:before {
-      bottom: 0.7%;
+      content: '';
+      position: absolute;
+      bottom: mixins.rem(-16);
       right: 0;
-      width: 67.3%;
-      aspect-ratio: 1.13;
-      background: 100% 100% / contain  url(./images/svg/Desktop/Illustration-Head.svg) no-repeat;
+      width: 100%;
+      aspect-ratio: 0.925;
+      display: block;
+      transform: translateY(mixins.rem(-20));
+      background: 50% 100% / 100% url(./images/svg/Portrait/Illustration-Head-Portrait.svg) no-repeat;
+
+      @include media.landscape {
+        bottom: 0.7%;
+        right: 0;
+        width: 67.3%;
+        aspect-ratio: 1.13;
+        background: 100% 100% / contain url(./images/svg/Desktop/Illustration-Head.svg) no-repeat;
+      }
     }
+
     &:after {
-      bottom: 7.8%;
-      left: 1.4%;
-      width: 30.8%;
-      aspect-ratio: 1.62;
-      background: 0 100% / contain url(./images/svg/Desktop/lines-white.svg) no-repeat;
+      @include media.landscape {
+        content: '';
+        position: absolute;
+        bottom: 7.8%;
+        left: 1.4%;
+        width: 30.8%;
+        aspect-ratio: 1.62;
+        transform: translateY(mixins.rem(20));
+        background: 0 100% / contain url(./images/svg/Desktop/lines-white.svg) no-repeat;
+      }
     }
-
-
   }
 }
 
 .title {
   max-width: 9em;
-}
 
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  span {
+    display: inline-block;
+    animation: .3s 0s 1 title both running;
   }
 }
+
+
+

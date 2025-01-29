@@ -105,18 +105,26 @@ h2 {
   font-family: 'Raleway', serif;
   z-index: 1;
   box-shadow: mixins.rem(10) mixins.rem(10) 0 mixins.rem(-2) var(--color-white), mixins.rem(10) mixins.rem(10) var(--color-orange);
-  transition: background-color 0.2s, color 0.2s, box-shadow 0.2s 0.2s;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
 
-  &:hover {
-    color: var(--color-orange);
-    background-color: var(--color-white);
-    box-shadow: 0 0 0 mixins.rem(-2) var(--color-white), 0 0 0 var(--color-orange);
+  @media (hover: hover) {
+    &:hover {
+      color: var(--color-white);
+      background-color: #FA4A34FF;
+      box-shadow: 0 0 0 mixins.rem(2) var(--color-white), 0 0 0 mixins.rem(4) var(--color-orange);
+    }
+    &:focus {
+      color: var(--color-white);
+      background-color: #FA4A34FF;
+      box-shadow: 0 0 0 mixins.rem(2) var(--color-white), 0 0 0 mixins.rem(4) var(--color-orange);
+    }
   }
-
-  &:focus {
-    color: var(--color-orange);
-    background-color: var(--color-white);
-    box-shadow: 0 0 0 mixins.rem(2) var(--color-white), 0 0 0 mixins.rem(4) var(--color-orange);
+  @media (hover: none) {
+    &:active {
+      color: var(--color-white);
+      background-color: #FA4A34FF;
+      box-shadow: 0 0 0 mixins.rem(2) var(--color-white), 0 0 0 mixins.rem(4) var(--color-orange);
+    }
   }
 }
 
