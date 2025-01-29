@@ -18,8 +18,12 @@ a {
   text-decoration: none;
   outline: none;
 }
+
 button {
-  &:focus {outline: none}
+  &:focus {
+    outline: none
+  }
+
   &:not(:disabled) {
     cursor: pointer;
   }
@@ -33,6 +37,7 @@ html {
   opacity: 0;
   animation: opacity 1s 0.5s forwards;
 }
+
 body {
   position: relative;
   min-width: 320px;
@@ -104,11 +109,13 @@ h2 {
   z-index: 1;
   box-shadow: mixins.rem(10) mixins.rem(10) 0 mixins.rem(-2) var(--color-white), mixins.rem(10) mixins.rem(10) var(--color-orange);
   transition: background-color 0.2s, color 0.2s, box-shadow 0.2s 0.2s;
+
   &:hover {
     color: var(--color-orange);
     background-color: var(--color-white);
-    box-shadow: 0 0 0 mixins.rem(-2) var(--color-white), 0 0 0  var(--color-orange);
+    box-shadow: 0 0 0 mixins.rem(-2) var(--color-white), 0 0 0 var(--color-orange);
   }
+
   &:focus {
     color: var(--color-orange);
     background-color: var(--color-white);

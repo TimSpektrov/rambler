@@ -126,6 +126,16 @@ exports.dev = series(
     // svgSprites,
     watchFiles
 )
-// exports.prod = series(isProd, clean, resources, htmlMinify, scripts, styles, images, webpImages, svgSprites)
+exports.build = series(
+    isProd,
+    clean,
+    resources,
+    htmlMinify,
+    scripts,
+    styles,
+    images,
+    // webpImages,
+    // svgSprites
+)
 
 
