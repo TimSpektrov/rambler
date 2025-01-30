@@ -59,7 +59,7 @@ $widthDesktop: mixins.rem(1600);
 }
 
 @mixin landscape {
-  @media screen and (orientation: landscape) {
+  @media screen and (orientation: landscape), ($widthTablet <= width)  {
     @content
   }
 }
