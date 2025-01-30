@@ -48,7 +48,7 @@
 
     @include media.desktop-down {
       margin-right: mixins.rem(16);
-      padding: mixins.rem(32) mixins.rem(20) mixins.rem(40) mixins.rem(24);
+      padding: mixins.rem(30) mixins.rem(20) mixins.rem(40) mixins.rem(22);
       margin-bottom: mixins.rem(70);
       box-shadow: mixins.rem(16) mixins.rem(16) var(--color-blue);
       font-size: mixins.rem(21);
@@ -63,6 +63,9 @@
   }
 
   &__button {
-    margin-right: mixins.rem(10);
+    @include media.tablet-down {
+      width: calc(100% - mixins.rem(10));
+      padding-inline: mixins.rem(16);
+    }
   }
 }

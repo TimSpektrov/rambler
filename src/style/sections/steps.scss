@@ -1,7 +1,7 @@
 @use 'src/style/helpers/media';
 @use 'src/style/helpers/mixins';
 
-.order {
+.steps {
   .container {
     padding-block: mixins.rem(90) mixins.rem(20);
 
@@ -83,19 +83,19 @@
     }
 
     @include media.laptop-up{
-      &:nth-child(1) .order__item-img {
+      &:nth-child(1) .steps__item-img {
         @include media.landscape {
           transform: translate(mixins.rem(-32), mixins.rem(-6)) ;
         }
       }
       &:nth-child(2) {
         padding-bottom: mixins.rem(72);
-        .order__item-img {
+        .steps__item-img {
           transform: translate(0, mixins.rem(16));
         }
       }
       &:nth-child(3) {
-        .order__item-img {
+        .steps__item-img {
           transform: translate(mixins.rem(-7), mixins.rem(4)) scale(1.08);
         }
       }

@@ -13,6 +13,7 @@
 .social {
   display: flex;
   justify-content: flex-start;
+  list-style: none;
   gap: mixins.rem(68);
   @include media.laptop-up {
     justify-content: flex-end;
@@ -25,6 +26,7 @@
 
   &__link {
     position: relative;
+    display: inline-block;
     z-index: 1;
 
     @media (hover: hover) {

@@ -1,8 +1,8 @@
 @use 'src/style/helpers/media';
 @use 'src/style/helpers/mixins';
 
-.re-vote {
-  &.negative {
+.online-voting {
+  &.section_colored {
     background-color: var(--color-orange);
   }
   .container {

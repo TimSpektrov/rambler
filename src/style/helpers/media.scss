@@ -26,6 +26,11 @@ $widthDesktop: mixins.rem(1600);
     @content
   }
 }
+@mixin tablet-down {
+  @media screen and (width < $widthMiniTablet) {
+    @content
+  }
+}
 
 @mixin laptop {
   @media screen and ($widthTablet <= width < $widthLaptop) {

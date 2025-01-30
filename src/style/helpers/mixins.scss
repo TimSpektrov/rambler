@@ -1,7 +1,7 @@
 @use 'sass:math';
 
 $maxViewportWidth: 1400;
-$minViewportWidth: 360;
+$minViewportWidth: 340;
 
 @function rem($pixel) {
   @if math.is-unitless($pixel) {

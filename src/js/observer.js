@@ -14,7 +14,6 @@ if (sections && navLinks) {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
                 const linkId = entry.target.id
-                console.log(linkId)
                 navLinks.forEach(link => {
                     if (linkId) {
                         if (`#${linkId}` === link.getAttribute('href')) {
@@ -24,7 +23,7 @@ if (sections && navLinks) {
                         }
                     }
                 })
-                if (linkId && linkId === 're-vote') {
+                if (linkId && linkId === 'online-voting') {
                     header.classList.add('orange');
                 } else  {
                     header.classList.remove('orange');

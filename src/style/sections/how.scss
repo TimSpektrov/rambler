@@ -1,7 +1,7 @@
 @use 'src/style/helpers/media';
 @use 'src/style/helpers/mixins';
 
-.how {
+.how-it-works {
   .container {
     background: 24% -10%/ 91% url(./images/svg/Desktop/ILLUSTRATION-2.svg) no-repeat;
     padding-bottom: mixins.rem(32);
