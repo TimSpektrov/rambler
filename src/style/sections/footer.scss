@@ -3,7 +3,7 @@
 .footer {
   background-color: var(--color-black);
   .container {
-    padding-inline: mixins.rem(27);
+    padding: mixins.rem(46) mixins.rem(27) mixins.rem(80);
 
     @include media.desktop {
       padding: mixins.rem(52) mixins.rem(80) mixins.rem(230);
@@ -20,8 +20,10 @@
   }
 
   &__img {
+    width: mixins.rem(24);
+    height: mixins.rem(22);
+    object-fit: contain;
     transition: filter 0.2s;
-    height: 100%;
   }
 
   &__link {

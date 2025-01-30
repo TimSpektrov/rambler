@@ -148,6 +148,7 @@ h2 {
 
 .section {
   &__description {
+    padding-bottom: 1.5em;
     @include mixins.fluid-text(26, 22);
     line-height: 1.53;
   }
